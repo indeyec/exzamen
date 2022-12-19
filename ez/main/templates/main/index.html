@@ -1,1 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'layout/base.html' %}
+{% block index %}
+<h1>Данил пи*р</h1>
+{% for item in rec %}
+    {{ item.name }}<br>
+    {{ item.desc }}<br>
+    {% if item.photo %}
+    <img src="{{ item.photo.url }}" alt="фото">
+    {% endif %}
+{% endfor %}
+{% endblock %}
